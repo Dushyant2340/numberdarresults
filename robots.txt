@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://numberdarresults.onrender.com/sitemap.xml
