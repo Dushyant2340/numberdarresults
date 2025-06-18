@@ -1,11 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <div class="owner">
-  <img src="dushyant.jpg" alt="Dushyant Chauhan">
-  <h3>📛 Owned, Designed & Operated by <strong>Dushyant Chauhan</strong></h3>
-</div>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Numberdar Results - Sarkari Exam Results</title>
@@ -34,7 +30,7 @@
     h2 { color: #007bff; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
     ul { text-align: left; padding-left: 20px; columns: 2; }
     li { margin: 6px 0; }
-    .owner { text-align: center; margin-top: 40px; }
+    .owner { text-align: center; margin: 20px auto; }
     .owner img { width: 120px; border-radius: 50%; box-shadow: 0 0 10px #aaa; }
     .owner h3 { color: #333; margin-top: 10px; }
     a { color: #007bff; text-decoration: none; }
@@ -47,52 +43,98 @@
 </head>
 <body>
 
-<!-- 🔔 Custom Notification Popup -->
-<div id="popupBox" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); display: flex; justify-content: center;
-  align-items: center; z-index: 9999; font-family: Arial, sans-serif;">
-  <div style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center;
-    max-width: 400px; width: 90%; box-shadow: 0 0 25px rgba(0,0,0,0.4); position: relative; animation: popIn 0.3s ease;">
+<header>
+  <h1>Numberdar Results</h1>
+  <p>All India Board Results, Admit Cards, Date Sheets & Competitive Exam Updates</p>
+</header>
 
-    <h2 style="color: #007bff;">🔔 Be the First to Know!</h2>
-    <p style="font-size: 15px; color: #444; margin-bottom: 20px;">
-      Get instant alerts for Board Results, Admit Cards, and Govt Exams.<br><strong>Join 50,000+ students across India 🇮🇳</strong>
-    </p>
-
-    <button onclick="subscribeToNotification()" style="margin-top: 10px; padding: 12px 25px;
-      background: #28a745; color: white; font-size: 16px; border: none;
-      border-radius: 8px; cursor: pointer;">
-      ✅ Yes, Keep Me Updated
-    </button>
-
-    <br><br>
-    <button onclick="closePopup()" style="font-size: 13px; background: none; color: #999;
-      border: none; cursor: pointer; text-decoration: underline;">
-      No thanks
-    </button>
-  </div>
+<!-- 📛 Owner Section -->
+<div class="owner">
+  <img src="dushyant.jpg" alt="Dushyant Chauhan">
+  <h3>📛 Owned, Designed & Operated by <strong>Dushyant Chauhan</strong></h3>
 </div>
 
-<script>
-  function subscribeToNotification() {
-    if (typeof OneSignal !== 'undefined') {
-      OneSignal.push(function() {
-        OneSignal.registerForPushNotifications();
-      });
-    } else {
-      alert("Notification system not loaded. Try refreshing.");
-    }
-    closePopup();
-  }
+<!-- 📘 Board Results -->
+<div class="section">
+  <h2>📘 Board Results (20 States)</h2>
+  <ul>
+    <li><a href="https://upmsp.edu.in">UP Board</a></li>
+    <li><a href="https://biharboardonline.bihar.gov.in">Bihar Board</a></li>
+    <li><a href="https://rajeduboard.rajasthan.gov.in">Rajasthan Board</a></li>
+    <li><a href="https://mpbse.nic.in">MP Board</a></li>
+    <li><a href="https://bseh.org.in">Haryana Board</a></li>
+    <li><a href="https://mahahsscboard.in">Maharashtra Board</a></li>
+    <li><a href="https://www.pseb.ac.in">Punjab Board</a></li>
+    <li><a href="https://www.gseb.org">Gujarat Board</a></li>
+    <li><a href="https://chseodisha.nic.in">Odisha CHSE</a></li>
+    <li><a href="https://cgbse.nic.in">Chhattisgarh Board</a></li>
+    <li><a href="https://bse.telangana.gov.in">Telangana Board</a></li>
+    <li><a href="https://bse.ap.gov.in">AP Board</a></li>
+    <li><a href="https://dge.tn.gov.in">Tamil Nadu Board</a></li>
+    <li><a href="https://kseeb.karnataka.gov.in">Karnataka Board</a></li>
+    <li><a href="https://keralaresults.nic.in">Kerala Board</a></li>
+    <li><a href="https://sebaonline.org">Assam Board</a></li>
+    <li><a href="https://jac.jharkhand.gov.in">Jharkhand Board</a></li>
+    <li><a href="https://hpbose.org">HP Board</a></li>
+    <li><a href="https://wbresults.nic.in">West Bengal</a></li>
+    <li><a href="https://tbse.tripura.gov.in">Tripura Board</a></li>
+  </ul>
+</div>
 
-  function closePopup() {
-    var popup = document.getElementById("popupBox");
-    if (popup) popup.style.display = "none";
-  }
-</script>
+<!-- 📗 Union Territories & CBSE -->
+<div class="section">
+  <h2>📗 UT & CBSE</h2>
+  <ul>
+    <li><a href="https://cbseresults.nic.in">CBSE Board</a></li>
+    <li><a href="https://jkbose.nic.in">Jammu & Kashmir</a></li>
+    <li><a href="https://leh.nic.in">Ladakh</a></li>
+    <li><a href="https://andaman.nic.in">Andaman Nicobar</a></li>
+    <li><a href="https://chdeducation.gov.in">Chandigarh</a></li>
+    <li><a href="https://dnh.gov.in">Dadra Nagar Haveli</a></li>
+    <li><a href="https://www.daman.nic.in">Daman Diu</a></li>
+    <li><a href="#">Puducherry</a></li>
+  </ul>
+</div>
 
-<!-- Website content will be pasted below manually after zip generation -->
-<!-- Truncated for readability -->
+<!-- 📅 Date Sheets -->
+<div class="section">
+  <h2>📅 Date Sheets</h2>
+  <ul>
+    <li><a href="https://cbse.gov.in">CBSE Date Sheet 2025</a></li>
+    <li><a href="https://upmsp.edu.in">UP Board</a></li>
+    <li><a href="https://biharboardonline.bihar.gov.in">Bihar Board</a></li>
+    <li><a href="https://mpbse.nic.in">MP Board</a></li>
+    <li><a href="https://rajeduboard.rajasthan.gov.in">Rajasthan</a></li>
+    <li><a href="https://mahahsscboard.in">Maharashtra</a></li>
+  </ul>
+</div>
 
+<!-- 🎟 Admit Cards -->
+<div class="section">
+  <h2>🎟 Admit Cards</h2>
+  <ul>
+    <li><a href="https://ctet.nic.in">CTET 2025</a></li>
+    <li><a href="https://cuet.samarth.ac.in">CUET UG 2025</a></li>
+    <li><a href="https://ssc.nic.in">SSC GD</a></li>
+    <li><a href="https://biharboardonline.bihar.gov.in">Bihar Board</a></li>
+    <li><a href="https://upmsp.edu.in">UP Board</a></li>
+  </ul>
+</div>
+
+<!-- 📝 Competitive Exams -->
+<div class="section">
+  <h2>📝 Competitive Exams</h2>
+  <ul>
+    <li><a href="https://upsc.gov.in">UPSC</a></li>
+    <li><a href="https://rrbcdg.gov.in">Railway Group D</a></li>
+    <li><a href="https://ibps.in">IBPS PO</a></li>
+    <li><a href="https://delhipolice.gov.in">Delhi Police</a></li>
+  </ul>
+</div>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Numberdar Results | All rights reserved by Dushyant Chauhan
+</footer>
 </body>
 </html>
