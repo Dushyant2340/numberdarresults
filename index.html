@@ -56,6 +56,38 @@
   </style>
 </head>
 <body>
+  <!-- 🔔 Attractive Allow Notification Popup -->
+<div id="popupBox" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.65); display: flex; justify-content: center;
+    align-items: center; z-index: 9999; font-family: Arial, sans-serif;">
+  <div style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center;
+    max-width: 400px; box-shadow: 0 0 20px rgba(0,0,0,0.3); position: relative;">
+    
+    <h2 style="color: #007bff;">🔔 Be the First to Know!</h2>
+    <p style="font-size: 16px; color: #444;">
+      Get instant alerts for Board Results, Admit Cards, and Govt Exams.<br>
+      <strong>Trusted by 50,000+ students across India 🇮🇳</strong>
+    </p>
+
+    <button onclick="OneSignal.push(() => { OneSignal.registerForPushNotifications(); closePopup(); });"
+      style="margin-top: 15px; padding: 12px 20px; background: #28a745; color: white; font-size: 16px;
+      border: none; border-radius: 6px; cursor: pointer;">
+      ✅ Yes, Notify Me
+    </button>
+
+    <br><br>
+    <button onclick="closePopup()" style="font-size: 13px; background: none; color: #888; border: none; cursor: pointer;">
+      No thanks
+    </button>
+  </div>
+</div>
+
+<script>
+  function closePopup() {
+    document.getElementById("popupBox").style.display = "none";
+  }
+</script>
+
   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
   window.OneSignal = window.OneSignal || [];
