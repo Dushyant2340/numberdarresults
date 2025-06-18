@@ -350,6 +350,43 @@
 </div>
 <!-- Footer -->
 <footer>
+  <!-- 🍪 Cookie Consent Bar -->
+<div id="cookieConsentBar" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #343a40;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  z-index: 9999;
+  display: none;">
+  हम आपकी बेहतर सेवा के लिए cookies का उपयोग करते हैं।  
+  <button onclick="acceptCookieConsent()" style="
+    margin-left: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;">स्वीकार करें</button>
+</div>
+
+<script>
+  function acceptCookieConsent() {
+    document.getElementById('cookieConsentBar').style.display = 'none';
+    localStorage.setItem('cookie_consent', 'accepted');
+  }
+  window.onload = function () {
+    if (!localStorage.getItem('cookie_consent')) {
+      document.getElementById('cookieConsentBar').style.display = 'block';
+    }
+  };
+</script>
+
   &copy; 2025 Numberdar Results | All rights reserved by Dushyant Chauhan
 </footer>
 </body>
