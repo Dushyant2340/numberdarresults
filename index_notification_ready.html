@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Numberdar Results - Sarkari Exam Results</title>
+  <meta name="description" content="Board Results, Admit Cards, Date Sheets & Competitive Exam Updates.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- ✅ Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3393263704889098" crossorigin="anonymous"></script>
+
+  <!-- ✅ OneSignal Web Push -->
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "0561ac7f-69b1-4b13-80a1-b20e606632b2",
+        notifyButton: { enable: false }
+      });
+    });
+  </script>
+
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
+    header, footer { text-align: center; padding: 15px; background: #007bff; color: white; }
+    .section { padding: 20px; max-width: 900px; margin: auto; background: white; box-shadow: 0 0 8px #ccc; margin-top: 20px; }
+    h2 { color: #007bff; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+    ul { text-align: left; padding-left: 20px; columns: 2; }
+    li { margin: 6px 0; }
+    .owner { text-align: center; margin-top: 40px; }
+    .owner img { width: 120px; border-radius: 50%; box-shadow: 0 0 10px #aaa; }
+    .owner h3 { color: #333; margin-top: 10px; }
+    a { color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🔔 Custom Notification Popup -->
+<div id="popupBox" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); display: flex; justify-content: center;
+  align-items: center; z-index: 9999; font-family: Arial, sans-serif;">
+  <div style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center;
+    max-width: 400px; width: 90%; box-shadow: 0 0 25px rgba(0,0,0,0.4); position: relative; animation: popIn 0.3s ease;">
+
+    <h2 style="color: #007bff;">🔔 Be the First to Know!</h2>
+    <p style="font-size: 15px; color: #444; margin-bottom: 20px;">
+      Get instant alerts for Board Results, Admit Cards, and Govt Exams.<br><strong>Join 50,000+ students across India 🇮🇳</strong>
+    </p>
+
+    <button onclick="subscribeToNotification()" style="margin-top: 10px; padding: 12px 25px;
+      background: #28a745; color: white; font-size: 16px; border: none;
+      border-radius: 8px; cursor: pointer;">
+      ✅ Yes, Keep Me Updated
+    </button>
+
+    <br><br>
+    <button onclick="closePopup()" style="font-size: 13px; background: none; color: #999;
+      border: none; cursor: pointer; text-decoration: underline;">
+      No thanks
+    </button>
+  </div>
+</div>
+
+<script>
+  function subscribeToNotification() {
+    if (typeof OneSignal !== 'undefined') {
+      OneSignal.push(function() {
+        OneSignal.registerForPushNotifications();
+      });
+    } else {
+      alert("Notification system not loaded. Try refreshing.");
+    }
+    closePopup();
+  }
+
+  function closePopup() {
+    var popup = document.getElementById("popupBox");
+    if (popup) popup.style.display = "none";
+  }
+</script>
+
+<!-- Website content will be pasted below manually after zip generation -->
+<!-- Truncated for readability -->
+
+</body>
+</html>
