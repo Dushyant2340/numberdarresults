@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  .exam-status {
-  font-size: 13px;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin-top: 6px;
-  display: inline-block;
-}
-.active { background: #28a745; color: white; }
-.awaited { background: #ffc107; color: #222; }
-.completed { background: #6c757d; color: white; }
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -96,14 +86,12 @@
   function denyNotify() {
     document.getElementById("notificationPrompt").style.display = "none";
   }
-
   window.onload = function() {
     setTimeout(() => {
       document.getElementById("notificationPrompt").style.display = "flex";
     }, 1000);
   }
 </script>
-
 <header>
   <!-- ✅ Ad Below Header -->
 <div style="text-align: center; margin: 20px 15px;">
@@ -125,44 +113,6 @@
 <div class="owner">
   <img src="dushyant.jpg" alt="Dushyant Chauhan">
   <h3>📛 Owned, Designed & Operated by <strong>Dushyant Chauhan</strong></h3>
-  <!-- 🌐 Quick Access Sections (Stylish Cards) -->
-<div style="
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-  font-family: 'Segoe UI', sans-serif;
-">
-
-  <h2>🎯 More Top Exams 2025</h2>
-<div class="grid">
-  <div class="card">
-    <a href="https://delhipolice.gov.in" target="_blank">Delhi Police Constable</a>
-    <div class="exam-status active">✅ Active</div>
-  </div>
-  <div class="card">
-    <a href="https://bpsc.bih.nic.in" target="_blank">BPSC 69th 2025</a>
-    <div class="exam-status awaited">🔄 Awaited</div>
-  </div>
-  <div class="card">
-    <a href="https://rsmssb.rajasthan.gov.in" target="_blank">RSMSSB 2025</a>
-    <div class="exam-status active">✅ Active</div>
-  </div>
-  <div class="card">
-    <a href="https://hssc.gov.in" target="_blank">HSSC CET 2025</a>
-    <div class="exam-status awaited">🔄 Awaited</div>
-  </div>
-  <div class="card">
-    <a href="https://joinindianarmy.nic.in" target="_blank">Indian Army Agniveer</a>
-    <div class="exam-status active">✅ Active</div>
-  </div>
-  <div class="card">
-    <a href="https://joinindiannavy.gov.in" target="_blank">Indian Navy 2025</a>
-    <div class="exam-status awaited">🔄 Awaited</div>
-  </div>
-</div>
-
   <!-- 🌐 28 States + 8 UTs - Stylish Result Cards with Hover Animation -->
 <div style="max-width: 1100px; margin: 40px auto; background: #ffffff; padding: 25px 30px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
   <h2 style="border-bottom: 2px solid #007bff; padding-bottom: 10px; color: #007bff;">
