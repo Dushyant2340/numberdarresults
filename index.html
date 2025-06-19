@@ -57,6 +57,53 @@
   </style>
 </head>
 <body>
+  <!-- 📌 Stylish Sidebar (Quick Exam Links) -->
+<div style="max-width: 300px; margin: 20px auto; background: #f7faff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
+  <h3 style="color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px;">🧭 Quick Exam Links</h3>
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    <li><a href="#boardresults" style="display: block; padding: 10px; border-radius: 6px; color: #007bff; text-decoration: none;">📘 Board Results</a></li>
+    <li><a href="#datesheets" style="display: block; padding: 10px; border-radius: 6px; color: #007bff; text-decoration: none;">📅 Date Sheets</a></li>
+    <li><a href="#admitcards" style="display: block; padding: 10px; border-radius: 6px; color: #007bff; text-decoration: none;">🎟 Admit Cards</a></li>
+    <li><a href="#oldresults" style="display: block; padding: 10px; border-radius: 6px; color: #007bff; text-decoration: none;">🕰️ Old Results</a></li>
+    <li><a href="#competitive" style="display: block; padding: 10px; border-radius: 6px; color: #007bff; text-decoration: none;">🏆 Competitive Exams</a></li>
+  </ul>
+</div>
+
+  <!-- 🔔 Stylish Notification Prompt -->
+<div id="notificationPrompt" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6); display: flex; justify-content: center; align-items: center; z-index: 9999; font-family: Arial, sans-serif;">
+  <div style="background: white; padding: 30px; border-radius: 12px; max-width: 400px; text-align: center; box-shadow: 0 0 15px rgba(0,0,0,0.3);">
+    <h2 style="color: #007bff;">🔔 Allow Notifications?</h2>
+    <p style="font-size: 15px; color: #444;">
+      Stay updated with latest Board Results, Admit Cards and Exam Announcements.  
+      <br><strong>Don’t miss important alerts!</strong>
+    </p>
+    <button onclick="allowNotify()" style="padding: 10px 20px; background-color: #28a745; color: white; border: none;
+      border-radius: 5px; font-size: 16px; margin-right: 10px; cursor: pointer;">✅ Allow</button>
+    <button onclick="denyNotify()" style="padding: 10px 20px; background-color: #dc3545; color: white; border: none;
+      border-radius: 5px; font-size: 16px; cursor: pointer;">❌ Deny</button>
+  </div>
+</div>
+
+<script>
+  function allowNotify() {
+    OneSignal.push(function() {
+      OneSignal.registerForPushNotifications();
+    });
+    document.getElementById("notificationPrompt").style.display = "none";
+  }
+
+  function denyNotify() {
+    document.getElementById("notificationPrompt").style.display = "none";
+  }
+
+  window.onload = function() {
+    setTimeout(() => {
+      document.getElementById("notificationPrompt").style.display = "flex";
+    }, 1000);
+  }
+</script>
+
 <header>
   <!-- ✅ Ad Below Header -->
 <div style="text-align: center; margin: 20px 15px;">
