@@ -1,201 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Numberdar Results</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: white;
-      color: black;
-    }
-
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
     header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
       background: linear-gradient(to right, #005b96, #003f72);
-      color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      color: white; padding: 15px 20px;
+      display: flex; justify-content: space-between; align-items: center;
     }
-
-    .brand-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .brand-left img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-    }
-
-    .brand-left h1 {
-      font-size: 20px;
-      margin: 0;
-    }
-
-    .brand-left p {
-      font-size: 12px;
-      margin: 0;
-    }
-
-    .brand-right img {
-      width: 28px;
-      height: 28px;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .container {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .dropdowns {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
+    .brand-left { display: flex; align-items: center; gap: 15px; }
+    .brand-left img { width: 50px; height: 50px; border-radius: 50%; }
+    .nav-links a { color: white; margin-left: 15px; text-decoration: none; font-weight: bold; }
+    .container { max-width: 900px; margin: auto; padding: 20px; }
     select {
-      padding: 10px;
+      width: 100%; padding: 10px; margin: 10px 0;
       font-size: 16px;
     }
-
     footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      border-top: 1px solid #ccc;
-      background-color: #f9f9f9;
-    }
-
-    @media screen and (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      nav {
-        flex-direction: column;
-        width: 100%;
-      }
+      background: #e0e0e0; padding: 15px; text-align: center;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="brand-left">
-      <img src="dushyant.jpg" alt="Dushyant Chauhan" />
-      <div>
-        <h1>Numberdar Results</h1>
-        <p>📛 Owned & Operated by Dushyant Chauhan</p>
-      </div>
-    </div>
-    <nav>
-      <a href="/index.html">Home</a>
-      <a href="/search.html">Search Result</a>
-      <a href="/download-admit.html">Admit Card</a>
-      <a href="/leaderboard.html">Topper List</a>
-    </nav>
-    <div class="brand-right">
-      <a href="https://instagram.com/dushyant_numberdar2340" target="_blank">
-        <img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram" />
-      </a>
-    </div>
-  </header>
-
-  <div class="container">
-    <h2>📘 Welcome to All India Exam Result Hub</h2>
-    <p>Select your board or exam below to access latest updates, results and more.</p>
-
-    <div class="dropdowns">
-      <select id="boardSelector">
-        <option value="">-- Select State/UT Board --</option>
-      </select>
-
-      <select id="examSelector">
-        <option value="">-- Select Competitive Exam --</option>
-      </select>
+<header>
+  <div class="brand-left">
+    <img src="dushyant.jpg" alt="Dushyant">
+    <div>
+      <h2>Numberdar Results</h2>
+      <p>by Dushyant Chauhan</p>
     </div>
   </div>
+  <nav class="nav-links">
+    <a href="#">🏠 Home</a>
+    <a href="#">🔍 Search</a>
+    <a href="#">📥 Admit</a>
+    <a href="#">🏆 Toppers</a>
+  </nav>
+</header>
 
-  <footer>
-    <strong>Numberdar Results</strong><br />
-    📛 Designed & Operated by Dushyant Chauhan •  
-    <a href="https://instagram.com/dushyant_numberdar2340" target="_blank">Insta</a>
-  </footer>
+<div class="container">
+  <h3>Select your Board or Exam</h3>
 
-  <script>
-    // Sample Data
-    const boards = {
-      "Uttar Pradesh": "up.html",
-      "Bihar": "bihar.html",
-      "Maharashtra": "maharashtra.html",
-      "Delhi": "delhi.html",
-      "Andhra Pradesh": "andhra.html"
-      // ...add all 36
-    };
+  <select id="boardSelect">
+    <option value="">-- State Boards --</option>
+    <option value="boards/andhra-pradesh.html">Andhra Pradesh</option>
+    <option value="boards/arunachal-pradesh.html">Arunachal Pradesh</option>
+    <option value="boards/assam.html">Assam</option>
+    <option value="boards/bihar.html">Bihar</option>
+    <option value="boards/chhattisgarh.html">Chhattisgarh</option>
+    <option value="boards/goa.html">Goa</option>
+    <option value="boards/gujarat.html">Gujarat</option>
+    <option value="boards/haryana.html">Haryana</option>
+    <option value="boards/himachal-pradesh.html">Himachal Pradesh</option>
+    <option value="boards/jharkhand.html">Jharkhand</option>
+    <option value="boards/karnataka.html">Karnataka</option>
+    <option value="boards/kerala.html">Kerala</option>
+    <option value="boards/madhya-pradesh.html">Madhya Pradesh</option>
+    <option value="boards/maharashtra.html">Maharashtra</option>
+    <option value="boards/manipur.html">Manipur</option>
+    <option value="boards/meghalaya.html">Meghalaya</option>
+    <option value="boards/mizoram.html">Mizoram</option>
+    <option value="boards/nagaland.html">Nagaland</option>
+    <option value="boards/odisha.html">Odisha</option>
+    <option value="boards/punjab.html">Punjab</option>
+    <option value="boards/rajasthan.html">Rajasthan</option>
+    <option value="boards/sikkim.html">Sikkim</option>
+    <option value="boards/tamil-nadu.html">Tamil Nadu</option>
+    <option value="boards/telangana.html">Telangana</option>
+    <option value="boards/tripura.html">Tripura</option>
+    <option value="boards/uttar-pradesh.html">Uttar Pradesh</option>
+    <option value="boards/uttarakhand.html">Uttarakhand</option>
+    <option value="boards/west-bengal.html">West Bengal</option>
+  </select>
 
-    const exams = [
-      "JEE (Main)",
-      "NEET",
-      "SSC CGL",
-      "UPSC",
-      "CUET UG",
-      "IBPS PO"
-      // ...more
-    ];
+  <select id="utSelect">
+    <option value="">-- Union Territories --</option>
+    <option value="uts/andaman-nicobar.html">Andaman & Nicobar</option>
+    <option value="uts/chandigarh.html">Chandigarh</option>
+    <option value="uts/dadra-nagar-haveli.html">Dadra & Nagar Haveli</option>
+    <option value="uts/delhi.html">Delhi</option>
+    <option value="uts/jammu-kashmir.html">Jammu & Kashmir</option>
+    <option value="uts/ladakh.html">Ladakh</option>
+    <option value="uts/lakshadweep.html">Lakshadweep</option>
+    <option value="uts/puducherry.html">Puducherry</option>
+  </select>
 
-    const boardSelect = document.getElementById("boardSelector");
-    const examSelect = document.getElementById("examSelector");
+  <select id="cbseSelect">
+    <option value="">-- National Board --</option>
+    <option value="cbse/cbse.html">CBSE Board</option>
+  </select>
 
-    for (const [state, file] of Object.entries(boards)) {
-      const opt = document.createElement("option");
-      opt.value = file;
-      opt.textContent = state;
-      boardSelect.appendChild(opt);
-    }
+  <select id="examSelect">
+    <option value="">-- Competitive Exams --</option>
+    <option value="exams/jee-main.html">JEE Main</option>
+    <option value="exams/neet.html">NEET</option>
+    <option value="exams/upsc.html">UPSC</option>
+    <option value="exams/cuet.html">CUET</option>
+    <option value="exams/nda.html">NDA</option>
+    <option value="exams/ctet.html">CTET</option>
+    <option value="exams/railway.html">Railway</option>
+    <option value="exams/ssc-cgl.html">SSC CGL</option>
+  </select>
+</div>
 
-    exams.forEach(exam => {
-      const opt = document.createElement("option");
-      opt.value = exam.toLowerCase().replace(/ /g, "-") + ".html";
-      opt.textContent = exam;
-      examSelect.appendChild(opt);
-    });
+<footer>
+  Created by Dushyant Chauhan •  
+  <a href="https://instagram.com/dushyant_numberdar2340" target="_blank">Instagram</a>
+</footer>
 
-    boardSelect.addEventListener('change', () => {
-      if (boardSelect.value) location.href = `/boards/${boardSelect.value}`;
-    });
+<script>
+  document.getElementById("boardSelect").onchange = function () {
+    if (this.value) window.location.href = this.value;
+  };
+  document.getElementById("utSelect").onchange = function () {
+    if (this.value) window.location.href = this.value;
+  };
+  document.getElementById("cbseSelect").onchange = function () {
+    if (this.value) window.location.href = this.value;
+  };
+  document.getElementById("examSelect").onchange = function () {
+    if (this.value) window.location.href = this.value;
+  };
+</script>
 
-    examSelect.addEventListener('change', () => {
-      if (examSelect.value) location.href = `/exams/${examSelect.value}`;
-    });
-  </script>
 </body>
 </html>
