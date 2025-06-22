@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Numberdar Results</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: black;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: linear-gradient(to right, #005b96, #003f72);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-left img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .brand-left h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .brand-left p {
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .brand-right img {
+      width: 28px;
+      height: 28px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .dropdowns {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      border-top: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-left">
+      <img src="dushyant.jpg" alt="Dushyant Chauhan" />
+      <div>
+        <h1>Numberdar Results</h1>
+        <p>📛 Owned & Operated by Dushyant Chauhan</p>
+      </div>
+    </div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/search.html">Search Result</a>
+      <a href="/download-admit.html">Admit Card</a>
+      <a href="/leaderboard.html">Topper List</a>
+    </nav>
+    <div class="brand-right">
+      <a href="https://instagram.com/dushyant_numberdar2340" target="_blank">
+        <img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram" />
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>📘 Welcome to All India Exam Result Hub</h2>
+    <p>Select your board or exam below to access latest updates, results and more.</p>
+
+    <div class="dropdowns">
+      <select id="boardSelector">
+        <option value="">-- Select State/UT Board --</option>
+      </select>
+
+      <select id="examSelector">
+        <option value="">-- Select Competitive Exam --</option>
+      </select>
+    </div>
+  </div>
+
+  <footer>
+    <strong>Numberdar Results</strong><br />
+    📛 Designed & Operated by Dushyant Chauhan •  
+    <a href="https://instagram.com/dushyant_numberdar2340" target="_blank">Insta</a>
+  </footer>
+
+  <script>
+    // Sample Data
+    const boards = {
+      "Uttar Pradesh": "up.html",
+      "Bihar": "bihar.html",
+      "Maharashtra": "maharashtra.html",
+      "Delhi": "delhi.html",
+      "Andhra Pradesh": "andhra.html"
+      // ...add all 36
+    };
+
+    const exams = [
+      "JEE (Main)",
+      "NEET",
+      "SSC CGL",
+      "UPSC",
+      "CUET UG",
+      "IBPS PO"
+      // ...more
+    ];
+
+    const boardSelect = document.getElementById("boardSelector");
+    const examSelect = document.getElementById("examSelector");
+
+    for (const [state, file] of Object.entries(boards)) {
+      const opt = document.createElement("option");
+      opt.value = file;
+      opt.textContent = state;
+      boardSelect.appendChild(opt);
+    }
+
+    exams.forEach(exam => {
+      const opt = document.createElement("option");
+      opt.value = exam.toLowerCase().replace(/ /g, "-") + ".html";
+      opt.textContent = exam;
+      examSelect.appendChild(opt);
+    });
+
+    boardSelect.addEventListener('change', () => {
+      if (boardSelect.value) location.href = `/boards/${boardSelect.value}`;
+    });
+
+    examSelect.addEventListener('change', () => {
+      if (examSelect.value) location.href = `/exams/${examSelect.value}`;
+    });
+  </script>
+</body>
+</html>
