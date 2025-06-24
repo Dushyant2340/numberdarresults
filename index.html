@@ -1,45 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Numberdar Results 2025</title>
   <style>
     body { font-family: sans-serif; background: #111; color: #fff; margin: 0; }
-    .header-bar {
-      display: flex; justify-content: space-between;
-      background: #222; color: #f0ad4e;
-      padding: 10px 16px; font-weight: bold;
-    }
+    .header-bar { display: flex; justify-content: space-between; background: #222; color: #f0ad4e; padding: 10px 16px; font-weight: bold; }
     .container { max-width: 600px; margin: auto; padding: 20px; }
-    select, button {
-      padding: 10px; margin: 8px 0;
-      border-radius: 8px; width: 100%;
-      font-weight: bold; border: none; outline: none;
-    }
-    button {
-      background: #007bff; color: white; cursor: pointer;
-    }
-    .owner-box {
-      display: flex; align-items: center; gap: 12px;
-      margin: 20px 0;
-    }
-    .owner-box img {
-      width: 60px; height: 60px; border-radius: 50%; object-fit: cover;
-    }
-    .owner-box span {
-      font-size: 14px; color: #aaa;
-    }
-    .owner-box strong {
-      color: #fff;
-    }
-    .footer {
-      margin-top: 40px; font-size: 14px; color: #aaa; text-align: center;
-    }
+    select, button { padding: 10px; margin: 8px 0; border-radius: 8px; width: 100%; font-weight: bold; border: none; outline: none; }
+    button { background: #007bff; color: white; cursor: pointer; }
+    .owner-box { display: flex; align-items: center; gap: 12px; margin: 20px 0; }
+    .owner-box img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+    .owner-box span { font-size: 14px; color: #aaa; }
+    .owner-box strong { color: #fff; }
+    .footer { margin-top: 40px; font-size: 14px; color: #aaa; text-align: center; }
     a { color: #ccc; text-decoration: none; }
   </style>
 </head>
 <body>
+
   <div class="header-bar">
     <div>🙏 जय बाबा मोहन राम की</div>
     <div>जय श्री श्याम 🔱</div>
@@ -57,23 +36,42 @@
     <select id="item">
       <option value="">-- Select State/UT or Exam --</option>
       <optgroup label="📘 States & UTs">
-        <option value="bihar">Bihar</option>
-        <option value="haryana">Haryana</option>
-        <option value="up">Uttar Pradesh</option>
-        <option value="rajasthan">Rajasthan</option>
-        <option value="cbse">CBSE</option>
-        <option value="delhi">Delhi</option>
-        <option value="punjab">Punjab</option>
-        <option value="mp">Madhya Pradesh</option>
-        <option value="gujarat">Gujarat</option>
-        <option value="maharashtra">Maharashtra</option>
-        <option value="uttarakhand">Uttarakhand</option>
-        <option value="himachal">Himachal Pradesh</option>
-        <option value="jammu">Jammu & Kashmir</option>
         <option value="andhra">Andhra Pradesh</option>
-        <option value="tamilnadu">Tamil Nadu</option>
+        <option value="arunachal">Arunachal Pradesh</option>
+        <option value="assam">Assam</option>
+        <option value="bihar">Bihar</option>
+        <option value="chhattisgarh">Chhattisgarh</option>
+        <option value="goa">Goa</option>
+        <option value="gujarat">Gujarat</option>
+        <option value="haryana">Haryana</option>
+        <option value="himachal">Himachal Pradesh</option>
+        <option value="jharkhand">Jharkhand</option>
+        <option value="karnataka">Karnataka</option>
         <option value="kerala">Kerala</option>
+        <option value="mp">Madhya Pradesh</option>
+        <option value="maharashtra">Maharashtra</option>
+        <option value="manipur">Manipur</option>
+        <option value="meghalaya">Meghalaya</option>
+        <option value="mizoram">Mizoram</option>
+        <option value="nagaland">Nagaland</option>
+        <option value="odisha">Odisha</option>
+        <option value="punjab">Punjab</option>
+        <option value="rajasthan">Rajasthan</option>
+        <option value="sikkim">Sikkim</option>
+        <option value="tamilnadu">Tamil Nadu</option>
+        <option value="telangana">Telangana</option>
+        <option value="tripura">Tripura</option>
+        <option value="up">Uttar Pradesh</option>
+        <option value="uttarakhand">Uttarakhand</option>
         <option value="wb">West Bengal</option>
+        <option value="andaman">Andaman & Nicobar Islands</option>
+        <option value="chandigarh">Chandigarh</option>
+        <option value="dadra">Dadra & Nagar Haveli & Daman & Diu</option>
+        <option value="delhi">Delhi</option>
+        <option value="jammu">Jammu & Kashmir</option>
+        <option value="ladakh">Ladakh</option>
+        <option value="lakshadweep">Lakshadweep</option>
+        <option value="puducherry">Puducherry</option>
       </optgroup>
       <optgroup label="🎓 Competitive Exams">
         <option value="ssc">SSC</option>
@@ -106,23 +104,42 @@
 
   <script>
     const sites = {
-      bihar: "http://biharboardonline.bihar.gov.in/",
-      haryana: "https://bseh.org.in/",
-      up: "https://upmsp.edu.in/",
-      rajasthan: "https://rajeduboard.rajasthan.gov.in/",
-      cbse: "https://cbseresults.nic.in/",
-      delhi: "https://edudel.nic.in/",
-      punjab: "https://www.pseb.ac.in/",
-      mp: "https://mpbse.nic.in/",
-      gujarat: "https://www.gseb.org/",
-      maharashtra: "https://mahahsscboard.in/",
-      uttarakhand: "https://ubse.uk.gov.in/",
-      himachal: "https://hpbose.org/",
-      jammu: "https://jkbose.nic.in/",
       andhra: "https://bie.ap.gov.in/",
-      tamilnadu: "https://dge.tn.gov.in/",
+      arunachal: "https://arunachalpradesh.gov.in/education/",
+      assam: "https://sebaonline.org/",
+      bihar: "http://biharboardonline.bihar.gov.in/",
+      chhattisgarh: "https://cgbse.nic.in/",
+      goa: "https://gbshse.gov.in/",
+      gujarat: "https://www.gseb.org/",
+      haryana: "https://bseh.org.in/",
+      himachal: "https://hpbose.org/",
+      jharkhand: "https://jharresults.nic.in/",
+      karnataka: "https://karresults.nic.in/",
       kerala: "https://keralaresults.nic.in/",
+      mp: "https://mpbse.nic.in/",
+      maharashtra: "https://mahahsscboard.in/",
+      manipur: "https://www.manresults.nic.in/",
+      meghalaya: "https://megresults.nic.in/",
+      mizoram: "https://mizoram.nic.in/",
+      nagaland: "https://nagariknews.com/education",
+      odisha: "https://www.orissaresults.nic.in/",
+      punjab: "https://www.pseb.ac.in/",
+      rajasthan: "https://rajeduboard.rajasthan.gov.in/",
+      sikkim: "https://sikkimhrdd.org/",
+      tamilnadu: "https://dge.tn.gov.in/",
+      telangana: "https://bse.telangana.gov.in/",
+      tripura: "https://tripuraresults.nic.in/",
+      up: "https://upmsp.edu.in/",
+      uttarakhand: "https://ubse.uk.gov.in/",
       wb: "https://wbresults.nic.in/",
+      andaman: "https://results.andaman.gov.in/",
+      chandigarh: "https://chdeducation.gov.in/",
+      dadra: "https://dnh.nic.in/",
+      delhi: "https://edudel.nic.in/",
+      jammu: "https://jkbose.nic.in/",
+      ladakh: "https://www.ladakh.nic.in/education/",
+      lakshadweep: "https://lakshadweep.gov.in/",
+      puducherry: "https://py.gov.in/edu",
       ssc: "https://ssc.nic.in/",
       upsc: "https://www.upsc.gov.in/",
       jee: "https://jeemain.nta.ac.in/",
@@ -151,5 +168,6 @@
       window.location.href = sites[val];
     }
   </script>
+
 </body>
 </html>
