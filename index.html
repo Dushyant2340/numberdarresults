@@ -16,22 +16,30 @@
       margin: auto;
       padding: 20px;
     }
-    .profile {
+    .owner-box {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      gap: 12px;
+      margin-bottom: 15px;
     }
-    .profile img {
+    .owner-box img {
       width: 60px;
+      height: 60px;
       border-radius: 50%;
-      margin-right: 15px;
+      object-fit: cover;
     }
-    .title {
+    .owner-box span {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .owner-box strong {
+      color: #fff;
+    }
+    h1 {
       font-size: 28px;
-      font-weight: bold;
+      margin-bottom: 5px;
     }
-    .sub-title {
-      font-size: 16px;
+    p {
       color: #aaa;
     }
     .search {
@@ -97,16 +105,12 @@
 </head>
 <body>
   <div class="container">
-    <div class="profile">
-      <img src="https://via.placeholder.com/60" alt="Aman Gupta">
-      <div>
-        <div>Aman Gupta</div>
-        <div class="sub-title">⚙️ Owned, Designed & Operated by</div>
-      </div>
+    <div class="owner-box">
+      <img src="dushyant.jpg" alt="Dushyant Chauhan">
+      <span>💪 Owned, Designed & Operated by <strong>Dushyant Chauhan</strong></span>
     </div>
-
-    <div class="title">Numberdar Results</div>
-    <div class="sub-title">28 States + 8 UTs Board Results, Admit Cards & Exams</div>
+    <h1>Numberdar Results</h1>
+    <p>28 States + 8 UTs Board Results, Admit Cards & Exams</p>
 
     <div class="header-controls">
       <button>Light</button>
@@ -115,39 +119,73 @@
 
     <div class="search">
       <select>
-        <option>Select state</option>
+        <option>Select state or exam</option>
         <option>Andhra Pradesh</option>
         <option>Arunachal Pradesh</option>
-        <!-- Add all states here -->
+        <option>Assam</option>
+        <option>Bihar</option>
+        <option>Chhattisgarh</option>
+        <option>Goa</option>
+        <option>Gujarat</option>
+        <option>Haryana</option>
+        <option>Himachal Pradesh</option>
+        <option>Jharkhand</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Madhya Pradesh</option>
+        <option>Maharashtra</option>
+        <option>Manipur</option>
+        <option>Meghalaya</option>
+        <option>Mizoram</option>
+        <option>Nagaland</option>
+        <option>Odisha</option>
+        <option>Punjab</option>
+        <option>Rajasthan</option>
+        <option>Sikkim</option>
+        <option>Tamil Nadu</option>
+        <option>Telangana</option>
+        <option>Tripura</option>
+        <option>Uttar Pradesh</option>
+        <option>Uttarakhand</option>
+        <option>West Bengal</option>
+        <option>Andaman & Nicobar Islands</option>
+        <option>Chandigarh</option>
+        <option>Dadra & Nagar Haveli and Daman & Diu</option>
+        <option>Delhi</option>
+        <option>Jammu & Kashmir</option>
+        <option>Ladakh</option>
+        <option>Lakshadweep</option>
+        <option>Puducherry</option>
+        <option>UPSC</option>
+        <option>SSC</option>
+        <option>JEE</option>
+        <option>NEET</option>
+        <option>CUET</option>
       </select>
       <input type="text" placeholder="Enter roll number">
       <button>View Result</button>
     </div>
 
     <div class="year-section">
-      <div class="year-title">2024</div>
-      <div class="state-item"><span>Andhra Pradesh</span><button>View Result</button></div>
-      <div class="state-item"><span>Arunachal Pradesh</span><button>View Result</button></div>
-      <div class="state-item"><span>Assam</span><button>View Result</button></div>
-      <div class="state-item"><span>Bihar</span><button>View Result</button></div>
-      <div class="state-item"><span>Chhattisgarh</span><button>View Result</button></div>
-      <div class="state-item"><span>Chandigarh</span><button>View Result</button></div>
+      <div class="year-title">2025 Board Results & Exams</div>
+      <div class="state-item"><span>Haryana Board 10th Result</span><button>View</button></div>
+      <div class="state-item"><span>CBSE 12th Result</span><button>View</button></div>
+      <div class="state-item"><span>Punjab Board Admit Card</span><button>View</button></div>
+      <div class="state-item"><span>Bihar Board Date Sheet</span><button>View</button></div>
     </div>
 
     <div class="year-section">
-      <div class="year-title">2023</div>
-      <div class="state-item"><span>Andhra Pradesh</span><button>View Result</button></div>
-      <div class="state-item"><span>Arunachal Pradesh</span><button>View Result</button></div>
-    </div>
-
-    <div class="state-item">
-      <span>Competitive Exams</span>
-      <button>></button>
+      <div class="year-title">2025 Competitive Exams</div>
+      <div class="state-item"><span>UPSC Prelims Result</span><button>View</button></div>
+      <div class="state-item"><span>SSC GD Admit Card</span><button>View</button></div>
+      <div class="state-item"><span>NEET 2025 Answer Key</span><button>View</button></div>
+      <div class="state-item"><span>JEE Main Result</span><button>View</button></div>
+      <div class="state-item"><span>CUET UG Admit Card</span><button>View</button></div>
     </div>
 
     <div class="footer">
-      © 2025 Numberdar Results | All rights reserved by Aman Gupta<br>
-      <a href="#">📸 aman123</a>
+      © 2025 Numberdar Results | All rights reserved by Dushyant Chauhan<br>
+      <a href="https://instagram.com/dushyant_numberdar2340" target="_blank">📸 Instagram: @dushyant_numberdar2340</a>
     </div>
   </div>
 </body>
