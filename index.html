@@ -1,181 +1,154 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="28 States + 8 UTs Results, Admit Cards & Competitive Exams">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Numberdar Results</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #f4f6fa;
-      color: #333;
-      transition: background 0.3s, color 0.3s;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
     }
-    body.dark {
-      background: #1c1c1e;
-      color: #eee;
-    }
-    header {
-      text-align: center;
-      padding: 30px 15px;
-      background: linear-gradient(135deg, #007bff, #00bcd4);
-      color: white;
-      position: relative;
-    }
-    header img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      margin: 10px 0 5px;
-    }
-    .tagline {
-      font-size: 14px;
-      color: #e0f7fa;
-    }
-    .dark header { background: #121212; }
-    .section {
-      max-width: 1100px;
-      margin: 30px auto;
+    .container {
+      max-width: 600px;
+      margin: auto;
       padding: 20px;
     }
-    .section h2 {
-      border-left: 4px solid #007bff;
-      padding-left: 10px;
-      color: #007bff;
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+    .profile img {
+      width: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
     }
-    .card {
-      background: #fff;
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .sub-title {
+      font-size: 16px;
+      color: #aaa;
+    }
+    .search {
+      background: #1a1a1a;
       padding: 15px;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      border-left: 4px solid #007bff;
-      transition: 0.3s;
-      text-decoration: none;
-      color: #333;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      background-color: #f0f8ff;
-    }
-    .dark .card { background: #2c2c2e; color: #ccc; }
-    .dark .card:hover { background: #3a3a3c; }
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background: #002244;
-      color: white;
-      font-size: 14px;
-    }
-    .switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    .search-bar {
-      text-align: center;
       margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-    .search-bar input {
+    select, input[type="text"] {
       padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      width: 90%;
-      max-width: 400px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+    button {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: #007bff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .year-section {
+      margin: 30px 0;
+    }
+    .year-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .state-item {
+      display: flex;
+      justify-content: space-between;
+      background: #1e1e1e;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #888;
+      text-align: center;
+    }
+    .footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    .header-controls {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .header-controls button {
+      background: #333;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="switch">
-      <label>
-        <input type="checkbox" onclick="toggleDarkMode()"> 🌙
-      </label>
+  <div class="container">
+    <div class="profile">
+      <img src="https://via.placeholder.com/60" alt="Aman Gupta">
+      <div>
+        <div>Aman Gupta</div>
+        <div class="sub-title">⚙️ Owned, Designed & Operated by</div>
+      </div>
     </div>
-    <img src="dushyant.jpg" alt="Dushyant Chauhan">
-    <h1>Numberdar Results</h1>
-    <p class="tagline">💪 Owned, Designed & Operated by <strong>Dushyant Chauhan</strong></p>
-    <p>28 States + 8 UTs Board Results, Admit Cards & Exams</p>
-    <a href="https://instagram.com/dushyant_numberdar2340" target="_blank" style="color: #fff;">📷 Instagram</a>
-  </header>  <div class="search-bar">
-    <input type="text" id="searchBox" placeholder="Search Exams or States" onkeyup="filterCards()">
-  </div>  <div class="section">
-    <h2>📘 Board Exams (28 States & 8 UTs)</h2>
-    <div class="grid" id="examGrid">
-      <a class="card" href="https://upmsp.edu.in">UP Board</a>
-      <a class="card" href="https://cbseresults.nic.in">CBSE</a>
-      <a class="card" href="https://biharboardonline.bihar.gov.in">Bihar Board</a>
-      <a class="card" href="https://mahahsscboard.in">Maharashtra Board</a>
-      <a class="card" href="https://dge.tn.gov.in">Tamil Nadu Board</a>
-      <a class="card" href="https://rajeduboard.rajasthan.gov.in">Rajasthan Board</a>
-      <a class="card" href="https://mpbse.nic.in">MP Board</a>
-      <a class="card" href="https://bseh.org.in">Haryana Board</a>
-      <a class="card" href="https://pseb.ac.in">Punjab Board</a>
-      <a class="card" href="https://gseb.org">Gujarat Board</a>
-      <a class="card" href="https://jac.jharkhand.gov.in">Jharkhand Board</a>
-      <a class="card" href="https://sebaonline.org">Assam Board</a>
-      <a class="card" href="https://hpbose.org">HP Board</a>
-      <a class="card" href="https://chseodisha.nic.in">Odisha Board</a>
-      <a class="card" href="https://kseeb.karnataka.gov.in">Karnataka Board</a>
-      <a class="card" href="https://keralaresults.nic.in">Kerala Board</a>
-      <a class="card" href="https://bse.ap.gov.in">AP Board</a>
-      <a class="card" href="https://bse.telangana.gov.in">Telangana Board</a>
-      <a class="card" href="https://cgbse.nic.in">Chhattisgarh Board</a>
-      <a class="card" href="https://wbresults.nic.in">West Bengal Board</a>
-      <a class="card" href="https://tbse.tripura.gov.in">Tripura Board</a>
-      <a class="card" href="https://ubse.uk.gov.in">Uttarakhand Board</a>
-      <a class="card" href="https://nbsenl.edu.in">Nagaland Board</a>
-      <a class="card" href="https://bsem.nic.in">Manipur Board</a>
-      <a class="card" href="https://mbose.in">Meghalaya Board</a>
-      <a class="card" href="https://mbse.edu.in">Mizoram Board</a>
-      <a class="card" href="https://sikkimhrdd.org">Sikkim Board</a>
-      <a class="card" href="https://gbshse.info">Goa Board</a>
-      <!-- UTs -->
-      <a class="card" href="https://jkbose.nic.in">Jammu & Kashmir</a>
-      <a class="card" href="https://leh.nic.in">Ladakh</a>
-      <a class="card" href="https://chdeducation.gov.in">Chandigarh</a>
-      <a class="card" href="https://dnh.gov.in">Dadra & Nagar Haveli</a>
-      <a class="card" href="https://daman.nic.in">Daman & Diu</a>
-      <a class="card" href="https://andaman.nic.in">Andaman & Nicobar</a>
-      <a class="card" href="https://py.gov.in">Puducherry</a>
-      <a class="card" href="https://delhi.gov.in">Delhi</a>
+
+    <div class="title">Numberdar Results</div>
+    <div class="sub-title">28 States + 8 UTs Board Results, Admit Cards & Exams</div>
+
+    <div class="header-controls">
+      <button>Light</button>
+      <button onclick="window.print()">Print</button>
     </div>
-  </div>  <div class="section">
-    <h2>🎯 Competitive Exams</h2>
-    <div class="grid">
-      <a class="card">UPSC Civil Services</a>
-      <a class="card">IIT JEE</a>
-      <a class="card">CA (Chartered Accountancy)</a>
-      <a class="card">NEET UG</a>
-      <a class="card">AIIMS UG</a>
-      <a class="card">GATE</a>
-      <a class="card">NDA</a>
-      <a class="card">CLAT</a>
+
+    <div class="search">
+      <select>
+        <option>Select state</option>
+        <option>Andhra Pradesh</option>
+        <option>Arunachal Pradesh</option>
+        <!-- Add all states here -->
+      </select>
+      <input type="text" placeholder="Enter roll number">
+      <button>View Result</button>
     </div>
-  </div>  <div class="footer">
-    &copy; 2025 Numberdar Results | All rights reserved by Dushyant Chauhan
-  </div>  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
-    function filterCards() {
-      const query = document.getElementById('searchBox').value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        const match = card.textContent.toLowerCase().includes(query);
-        card.style.display = match ? '' : 'none';
-      });
-    }
-  </script></body>
+
+    <div class="year-section">
+      <div class="year-title">2024</div>
+      <div class="state-item"><span>Andhra Pradesh</span><button>View Result</button></div>
+      <div class="state-item"><span>Arunachal Pradesh</span><button>View Result</button></div>
+      <div class="state-item"><span>Assam</span><button>View Result</button></div>
+      <div class="state-item"><span>Bihar</span><button>View Result</button></div>
+      <div class="state-item"><span>Chhattisgarh</span><button>View Result</button></div>
+      <div class="state-item"><span>Chandigarh</span><button>View Result</button></div>
+    </div>
+
+    <div class="year-section">
+      <div class="year-title">2023</div>
+      <div class="state-item"><span>Andhra Pradesh</span><button>View Result</button></div>
+      <div class="state-item"><span>Arunachal Pradesh</span><button>View Result</button></div>
+    </div>
+
+    <div class="state-item">
+      <span>Competitive Exams</span>
+      <button>></button>
+    </div>
+
+    <div class="footer">
+      © 2025 Numberdar Results | All rights reserved by Aman Gupta<br>
+      <a href="#">📸 aman123</a>
+    </div>
+  </div>
+</body>
 </html>
