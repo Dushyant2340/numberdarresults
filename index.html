@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Numberdar Results</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numberdar Results 2025</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #fff;
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #111; color: #fff; }
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      background: #222;
+      color: #f0ad4e;
+      padding: 8px 16px;
+      font-weight: bold;
     }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      padding: 20px;
-    }
+    .container { max-width: 700px; margin: auto; padding: 20px; }
     .owner-box {
       display: flex;
       align-items: center;
@@ -32,16 +31,9 @@
       font-size: 14px;
       color: #aaa;
     }
-    .owner-box strong {
-      color: #fff;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 5px;
-    }
-    p {
-      color: #aaa;
-    }
+    .owner-box strong { color: #fff; }
+    h1 { font-size: 28px; margin-bottom: 5px; }
+    p { color: #aaa; }
     .search {
       background: #1a1a1a;
       padding: 15px;
@@ -51,7 +43,7 @@
       flex-direction: column;
       gap: 10px;
     }
-    select, input[type="text"] {
+    select {
       padding: 10px;
       border-radius: 8px;
       border: none;
@@ -66,56 +58,29 @@
       font-weight: bold;
       cursor: pointer;
     }
-    .year-section {
-      margin: 30px 0;
-    }
-    .year-title {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-    .state-item {
-      display: flex;
-      justify-content: space-between;
-      background: #1e1e1e;
-      padding: 12px;
-      border-radius: 8px;
-      margin-bottom: 8px;
-    }
+    .button-group button:nth-child(2) { background: #ffc107; color: #000; }
+    .button-group button:nth-child(3) { background: #17a2b8; }
     .footer {
       margin-top: 40px;
       font-size: 13px;
       color: #888;
       text-align: center;
     }
-    .footer a {
-      color: #ccc;
-      text-decoration: none;
-    }
-    .header-controls {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .header-controls button {
-      background: #333;
-      color: #fff;
-    }
+    .footer a { color: #ccc; text-decoration: none; }
   </style>
 </head>
 <body>
+  <div class="header-bar">
+    <div>जय बाबा मोहन राम की</div>
+    <div>जय श्री श्याम</div>
+  </div>
   <div class="container">
     <div class="owner-box">
       <img src="dushyant.jpg" alt="Dushyant Chauhan">
       <span>💪 Owned, Designed & Operated by <strong>Dushyant Chauhan</strong></span>
     </div>
     <h1>Numberdar Results</h1>
-    <p>28 States + 8 UTs Board Results, Admit Cards & Exams</p>
-
-    <div class="header-controls">
-      <button>Light</button>
-      <button onclick="window.print()">Print</button>
-    </div>
+    <p>28 States + 8 UTs Board & Competitive Exams 2025</p>
 
     <div class="search">
       <select>
@@ -162,25 +127,11 @@
         <option>NEET</option>
         <option>CUET</option>
       </select>
-      <input type="text" placeholder="Enter roll number">
-      <button>View Result</button>
-    </div>
-
-    <div class="year-section">
-      <div class="year-title">2025 Board Results & Exams</div>
-      <div class="state-item"><span>Haryana Board 10th Result</span><button>View</button></div>
-      <div class="state-item"><span>CBSE 12th Result</span><button>View</button></div>
-      <div class="state-item"><span>Punjab Board Admit Card</span><button>View</button></div>
-      <div class="state-item"><span>Bihar Board Date Sheet</span><button>View</button></div>
-    </div>
-
-    <div class="year-section">
-      <div class="year-title">2025 Competitive Exams</div>
-      <div class="state-item"><span>UPSC Prelims Result</span><button>View</button></div>
-      <div class="state-item"><span>SSC GD Admit Card</span><button>View</button></div>
-      <div class="state-item"><span>NEET 2025 Answer Key</span><button>View</button></div>
-      <div class="state-item"><span>JEE Main Result</span><button>View</button></div>
-      <div class="state-item"><span>CUET UG Admit Card</span><button>View</button></div>
+      <div class="button-group">
+        <button onclick="navigateTo('results')">View Result</button>
+        <button onclick="navigateTo('admitcards')">Admit Card</button>
+        <button onclick="navigateTo('datesheet')">Date Sheet</button>
+      </div>
     </div>
 
     <div class="footer">
@@ -188,5 +139,21 @@
       <a href="https://instagram.com/dushyant_numberdar2340" target="_blank">📸 Instagram: @dushyant_numberdar2340</a>
     </div>
   </div>
+
+  <script>
+    function clean(val) {
+      return val.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '_').replace(/,+/g, '');
+    }
+    function navigateTo(type) {
+      const select = document.querySelector("select");
+      const selected = select.value;
+      if (!selected || selected === "Select state or exam") {
+        alert("Please select a state or exam first!");
+        return;
+      }
+      const page = clean(selected) + "_" + type + ".html";
+      window.location.href = page;
+    }
+  </script>
 </body>
 </html>
