@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Numberdar Results™ - Home</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    select, button {
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    img {
+      border-radius: 100px;
+      width: 120px;
+      height: 120px;
+      border: 2px solid #fff;
+      margin-bottom: 20px;
+    }
+    a {
+      color: #00f0ff;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+  <script>
+    function goToResult() {
+      var link = document.getElementById("resultLinks").value;
+      if (link) window.location.href = link;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div style="display: flex; justify-content: space-between; color: #0ff;">
+      <span>🙏 जय बाबा मोहन राम की</span>
+      <span>🔱 जय श्री श्याम</span>
+    </div>
+    <div>
+      <img src="dushyant.jpg" alt="Dushyant Chauhan"><br>
+      <strong>💪 Owned, Designed & Operated by Dushyant Chauhan</strong><br>
+      <a href="https://www.instagram.com/dushyant_numberdar2340" target="_blank">@dushyant_numberdar2340</a>
+    </div>
+    <h1>Numberdar Results™</h1>
+    <p>India’s Most Trusted Result Portal</p>
+  </header>
+
+  <main>
+    <h2>Select State / Exam</h2>
+    <select id="resultLinks">
+      <optgroup label="📍 States">
+        <option value="haryana.html">Haryana</option>
+        <option value="uttar-pradesh.html">Uttar Pradesh</option>
+        <option value="bihar.html">Bihar</option>
+        <option value="punjab.html">Punjab</option>
+        <option value="delhi.html">Delhi</option>
+      </optgroup>
+      <optgroup label="🏛 Union Territories">
+        <option value="jammu-and-kashmir.html">Jammu and Kashmir</option>
+        <option value="ladakh.html">Ladakh</option>
+        <option value="puducherry.html">Puducherry</option>
+      </optgroup>
+      <optgroup label="📝 Competitive Exams">
+        <option value="jee-main.html">JEE Main</option>
+        <option value="neet.html">NEET</option>
+        <option value="ssc.html">SSC</option>
+        <option value="upsc.html">UPSC</option>
+        <option value="ctet.html">CTET</option>
+      </optgroup>
+    </select><br>
+    <button onclick="goToResult()">Go to Result</button>
+  </main>
+
+  <footer>
+    📍 Designed in Haryana by Dushyant Chauhan<br>
+    © 2025 Numberdar Results™. All rights reserved.
+  </footer>
+</body>
+</html>
